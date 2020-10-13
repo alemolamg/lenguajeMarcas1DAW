@@ -6,16 +6,16 @@
   <!ELEMENT apodo (#PCDATA)>
   <!ELEMENT fechaNacimiento (#PCDATA)>
 ]>
-
+<!-- Elige solo uno de los dos elementos de musico + fechaNacimiento-->
 <musicos>
   <musico>
-    <nombre>Antonio Vivaldi</nombre>
+    <!-- <nombre>Antonio Vivaldi</nombre> -->
     <apodo>El cura pelirrojillo</apodo>
     <fechaNacimiento>4 de marzo de 1678</fechaNacimiento>
   </musico>
   <musico>
     <nombre>Johann Sebastian Bach</nombre>
-    <apodo>El viejo peluca</apodo>
+    <!-- <apodo>El viejo peluca</apodo> -->
     <fechaNacimiento>21 de marzo de 1685</fechaNacimiento>
   </musico>
 </musicos>

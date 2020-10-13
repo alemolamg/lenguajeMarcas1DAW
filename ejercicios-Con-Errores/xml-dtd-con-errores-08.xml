@@ -8,14 +8,15 @@
 ]>
 
 <agenda>
-  <contacto>
+  <contacto>  <!-- Debe incluir telefonoMovil-->
     <nombre>Ayuntamiento</nombre>
     <telefonoFijo>010</telefonoFijo>
+    <telefonoMovil></telefonoMovil>
   </contacto>
-  <contacto>
+  <contacto>  <!-- Orden incorrecto-->
     <nombre>Emergencias</nombre>
     <telefonoFijo>112 (Unión Europea)</telefonoFijo>
-    <telefonoMovil>Desconocido</telefonoMovil>
     <telefonoFijo>911 (Estados Unidos)</telefonoFijo>
+    <telefonoMovil>Desconocido</telefonoMovil>
   </contacto>
 </agenda>
