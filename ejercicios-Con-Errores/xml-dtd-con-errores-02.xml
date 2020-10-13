@@ -6,7 +6,5 @@
 
 <letras>
   <letra>m</letra>
-</letras>
-<letras> 
-  <letra>uve doble</letra> 
+  <!-- <letra>uve doble</letra>  //no debe aparecer-->
 </letras>
