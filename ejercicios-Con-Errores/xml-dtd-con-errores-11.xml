@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE efemerides [
-  <!ELEMENT efemerides (efemeride)>
+  <!ELEMENT efemerides (efemeride+)>
   <!ELEMENT efemeride (fecha, hecho)>
-]>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT hecho (#PCDATA)>
+  ]>
 
 <efemerides>
   <efemeride>

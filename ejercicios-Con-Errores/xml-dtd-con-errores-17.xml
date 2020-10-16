@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE contabilidad [
-  <!ELEMENT contabilidad ((ingreso | gasto)*)>
+  <!ELEMENT contabilidad (apunte)*>
+  <!ELEMENT apunte ((ingreso | gasto)*, fecha, cantidad, concepto)>
   <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT ingreso EMPTY>
+  <!ELEMENT gasto EMPTY>
   <!ELEMENT cantidad (#PCDATA)>
   <!ELEMENT concepto (#PCDATA)>
 ]>
