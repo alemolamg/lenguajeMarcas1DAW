@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE paises [
-<!ELEMENT paises (pais*)>
-  <!ELEMENT pais (nombre, unionEuropea*, otan*)>
+  <!ELEMENT paises (pais*)>
+  <!ELEMENT pais (nombre, unionEuropea?, otan?)>
   <!ELEMENT nombre (#PCDATA)>
   <!ELEMENT unionEuropea EMPTY>
   <!ELEMENT otan EMPTY>
