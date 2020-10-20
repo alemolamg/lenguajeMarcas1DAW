@@ -2,13 +2,13 @@
 <!DOCTYPE futbol [
   <!ELEMENT futbol (jugador*)>
   <!ELEMENT jugador EMPTY>
-  <!ATTLIST jugador nombre NMTOKENS #REQUIRED>
+  <!ATTLIST jugador nombre CDATA #REQUIRED>
   <!ATTLIST jugador codigo ID #REQUIRED>
 ]>
 
 <futbol>
-  <jugador nombre="Alfredo Di Stéfano" codigo="1"/>
-  <jugador nombre="Edson Arantes do Nascimento, Pelé" codigo="2" />
-  <jugador nombre="Diego Armando Maradona" codigo="3" />
-  <jugador nombre="Johan Cruyff" codigo="4" />
+  <jugador nombre="Alfredo Di Stéfano" codigo="a1"/>
+  <jugador nombre="Edson Arantes do Nascimento, Pelé" codigo="a2" />
+  <jugador nombre="Diego Armando Maradona" codigo="a3" />
+  <jugador nombre="Johan Cruyff" codigo="a4" />
 </futbol>

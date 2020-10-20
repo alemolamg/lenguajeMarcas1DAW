@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pelicula [
   <!ELEMENT pelicula EMPTY>
-  <!ATTLIST pelicula titulo CDATA #IMPLIED>
+  <!ATTLIST pelicula titulo CDATA #IMPLIED
+                     genero CDATA #REQUIRED>
 ]>
 
 <pelicula titulo="La diligencia" genero="oeste" />

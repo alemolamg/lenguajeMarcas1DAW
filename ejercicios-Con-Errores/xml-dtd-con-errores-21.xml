@@ -7,6 +7,6 @@
 ]>
 
 <cuadros>
-  <cuadro titulo="Adán y Eva" autor="Alberto Durero" />
-  <cuadro autor="Lucas Cranach, el viejo" titulo="Adán y Eva" />
+  <cuadro titulo="Adán_y_Eva" autor="Alberto Durero" />
+  <cuadro autor="Lucas Cranach, el viejo" titulo="Adán_y_Eva2" />
 </cuadros>
