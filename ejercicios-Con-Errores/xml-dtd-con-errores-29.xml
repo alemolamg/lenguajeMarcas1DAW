@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE albumesMortadelo [
   <!ELEMENT albumesMortadelo (album*)>
-  <!ELEMENT album (nombre, fecha)>
+  <!ELEMENT album EMPTY>
   <!ATTLIST album nombre CDATA #REQUIRED>
-  <!ATTLIST album fecha(1969,1970,1971,1972,1973,1974) #REQUIRED>
+  <!ATTLIST album fecha (1969 | 1970 | 1971 | 1972 | 1973| 1974) #REQUIRED>
 ]>
 
 <albumesMortadelo>
