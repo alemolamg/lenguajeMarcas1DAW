@@ -1,4 +1,7 @@
-﻿<factura n_fac="f999"> 
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura SYSTEM "03_datosFactura.dtd">
+
+<factura n_fac="f999"> 
   <datos_empresa> 
     <nombre>Equipos Digitales S.L.</nombre> 
     <dir>Av. Valladolid</dir> 
