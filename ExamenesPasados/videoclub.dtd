@@ -1,13 +1,15 @@
 <!ELEMENT videoclub (Almacen)>
 <!ELEMENT almacen (peliculas | series | videojuegos)*>
 
-<!ELEMENT peliculas (nombre,año,director+)>
+<!ELEMENT peliculas (nombre,anio,director+)>
     <!ELEMENT nombre (#PCDATA)>
-    <!ELEMENT año (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
     <!ELEMENT director (#PCDATA)>
 
 <!ELEMENT series (nombre,temporada+)>
-    <!ELEMENT temporada (numTemporada, director)>
-    <!ELEMENT numTemporada (#PCDATA)>
+    <!ELEMENT temporada (numTemporada, director, anio)>
+    <!ELEMENT numTemporada >
 
-<!ELEMENT videojuegos (#PCDATA)>
+<!ELEMENT videojuegos (nombre, compania, plataforma+, anio )>
+    <!ELEMENT plataforma (#PCDATA)>
+    <!ELEMENT compania (#PCDATA)>
