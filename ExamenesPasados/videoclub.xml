@@ -1,2 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE videoclub SYSTEM "videoclub.dtd" >
+
+<videoclub>
+    <almacen>
+        <pelicula>
+            <nombre>Seven</nombre>
+            <anio>1995</anio>
+            <director>David Fincher</director>
+            <disponible />
+        </pelicula>
+        <pelicula>
+            <nombre>The social network</nombre>
+            <anio>2010</anio>
+            <director>David Fincher</director>
+        </pelicula>
+        <videojuego>
+            <nombre>Dirt Rally</nombre>
+            <compania>Codemasters</compania>
+            <plataforma>PlayStation</plataforma>
+            <plataforma>Xbox</plataforma>
+            <anio>2015</anio>
+        </videojuego>
+        <pelicula>
+            <nombre>The Untouchables</nombre>
+            <anio>1987</anio>
+            <director>Brian De Palma</director>
+            <disponible />
+        </pelicula>
+        <serie>
+            <nombre>Cobra Kai</nombre>
+            <temporada>
+                <numTemporada>1</numTemporada>
+                <director>Joe Piarulli</director>
+                <anio>2018</anio>
+                <disponible />
+            </temporada>
+            <temporada>
+                <numTemporada>2</numTemporada>
+                <director>Luan Thomas</director>
+                <director>Josh Heald</director>
+                <anio>2019</anio>
+                <disponible />
+            </temporada>
+            <temporada>
+                <numTemporada>3</numTemporada>
+                <director>Josh Heald</director>
+                <anio>2020</anio>
+            </temporada>
+        </serie>
+        <videojuego>
+            <nombre>Crusader Kings II</nombre>
+            <compania>Paradox Interactive</compania>
+            <plataforma>PC-Steam</plataforma>
+            <anio>2012</anio>
+            <disponible />
+        </videojuego>
+        <pelicula>
+            <nombre>Snatch: cerdos y diamantes</nombre>
+            <anio>2000</anio>
+            <director>Guy Ritchie</director>
+        </pelicula>
+        <pelicula>
+            <nombre>The Matrix</nombre>
+            <anio>1999</anio>
+            <director>Lana Wachowski</director>
+            <director>Lilly Wachowski</director>
+        </pelicula>
+
+    </almacen>
+</videoclub>
