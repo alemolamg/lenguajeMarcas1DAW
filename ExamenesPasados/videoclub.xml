@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE videoclub SYSTEM "videoclub.dtd" >
-
+<!DOCTYPE videoclub SYSTEM "videoclub.dtd">
 <videoclub>
     <almacen>
         <pelicula>
             <nombre>Seven</nombre>
             <anio>1995</anio>
-            <director>David Fincher</director>
+            <director nombre="David Fincher"/>
             <disponible />
         </pelicula>
         <pelicula>
             <nombre>The social network</nombre>
             <anio>2010</anio>
-            <director>David Fincher</director>
+            <director nombre="David Fincher" />
         </pelicula>
         <videojuego>
             <nombre>Dirt Rally</nombre>
@@ -24,27 +23,27 @@
         <pelicula>
             <nombre>The Untouchables</nombre>
             <anio>1987</anio>
-            <director>Brian De Palma</director>
+            <director nombre="Brian De Palma"></director>
             <disponible />
         </pelicula>
         <serie>
             <nombre>Cobra Kai</nombre>
             <temporada>
                 <numTemporada>1</numTemporada>
-                <director>Joe Piarulli</director>
+                <director nombre="Joe Piarulli"></director>
                 <anio>2018</anio>
                 <disponible />
             </temporada>
             <temporada>
                 <numTemporada>2</numTemporada>
-                <director>Luan Thomas</director>
-                <director>Josh Heald</director>
+                <director nombre="Luan Thomas"></director>
+                <director nombre="Josh Heald"></director>
                 <anio>2019</anio>
                 <disponible />
             </temporada>
             <temporada>
                 <numTemporada>3</numTemporada>
-                <director>Josh Heald</director>
+                <director nombre="Josh Heald"></director>
                 <anio>2020</anio>
             </temporada>
         </serie>
@@ -58,14 +57,19 @@
         <pelicula>
             <nombre>Snatch: cerdos y diamantes</nombre>
             <anio>2000</anio>
-            <director>Guy Ritchie</director>
+            <director nombre="Guy Ritchie"></director>
         </pelicula>
         <pelicula>
             <nombre>The Matrix</nombre>
             <anio>1999</anio>
-            <director>Lana Wachowski</director>
-            <director>Lilly Wachowski</director>
+            <director nombre="Lana Wachowski" />
+            <director nombre="Lilly Wachowski" />
         </pelicula>
-
+        <videojuego>
+            <nombre>Ratchet y Clank</nombre>
+            <compania>insomniac Games</compania>
+            <plataforma>Playstation</plataforma>
+            <anio>2000</anio>
+        </videojuego>
     </almacen>
 </videoclub>
