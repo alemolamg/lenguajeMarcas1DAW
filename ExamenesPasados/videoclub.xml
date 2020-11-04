@@ -65,6 +65,11 @@
             <director nombre="Lana Wachowski" />
             <director nombre="Lilly Wachowski" />
         </pelicula>
-
+        <videojuego>
+            <nombre>Ratchet y Clank</nombre>
+            <compania>insomniac Games</compania>
+            <plataforma>Playstation</plataforma>
+            <anio>2000</anio>
+        </videojuego>
     </almacen>
 </videoclub>
