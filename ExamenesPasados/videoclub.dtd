@@ -4,7 +4,8 @@
 <!ELEMENT pelicula (nombre,anio,director+,disponible?)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT anio (#PCDATA)>
-    <!ELEMENT director (#PCDATA)>
+    <!ELEMENT director EMPTY>
+    <!ATTLIST director nombre CDATA #REQUIRED>
     <!ELEMENT disponible EMPTY>
 
 <!ELEMENT serie (nombre,temporada+)>
