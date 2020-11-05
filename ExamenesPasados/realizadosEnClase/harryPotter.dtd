@@ -1,3 +1,10 @@
-<!ELEMENT harryPotter (#PCDATA)>
+<!ELEMENT harryPotter (#PCDATA | casa)*>
 <!ENTITY harry "Me encanta Harry Potter">
-<!ENTITY harryPotter "edad (infantil | adolescente | adulto) 'infaltil'" >
+<!ENTITY % atributoEdad "edad (infantil | adolescente | adulto) 'infaltil'" >
+<!ATTLIST harryPotter %atributoEdad;>
+<!ELEMENT casa (personaje+)>
+<!ATTLIST casa nombre ID #IMPLIED>
+<!ELEMENT personaje EMPTY>
+<!ATTLIST personaje nombre ID #REQUIRED
+                    %atributoEdad;
+                    estado (muerto | vivo) #FIXED "vivo" >
