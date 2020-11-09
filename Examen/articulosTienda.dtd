@@ -1,0 +1,13 @@
+<!ELEMENT tienda (#PCDATA | articulo | categoria)*>
+<!ELEMENT categoria EMPTY>
+<!ENTITY % atributoColor "color (negro | azul | blanco | gris | rojo) 'negro'">
+<!ATTLIST categoria nombreCat ID #REQUIRED>
+<!ELEMENT articulo ( color*,precio, existencias?)+>
+<!ATTLIST articulo  nombre ID #REQUIRED
+                    categoria IDREF #IMPLIED
+                    compuestoPor IDREFS #IMPLIED>
+<!ELEMENT color EMPTY>
+<!ATTLIST color %atributoColor;>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT existencias EMPTY>
+<!ATTLIST existencias estado CDATA #FIXED "disponible">

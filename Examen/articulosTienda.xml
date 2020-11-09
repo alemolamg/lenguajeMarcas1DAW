@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "articulosTienda.dtd">
+<tienda>
+    Tienda Multiusos ACME
+    <categoria nombreCat="juguetes" />
+    <categoria nombreCat="componentes" />
+    <categoria nombreCat="electrodomésticos" />
+    <articulo nombre="Peonza" categoria="juguetes">
+        <color color="rojo" />
+        <color color="azul" />
+        <precio>2€</precio>
+        <existencias estado="disponible" />
+    </articulo>
+    <articulo nombre="panelLed" categoria="componentes">
+        <precio>73€</precio>
+        <existencias />
+    </articulo>
+    <articulo nombre="mando">
+        <color color="negro" />
+        <precio>12€</precio>
+        <existencias />
+    </articulo>
+    <articulo nombre="Television" categoria="electrodomésticos" compuestoPor="mando panelLed">
+        <color color="negro" />
+        <color color="blanco" />
+        <color color="gris" />
+        <precio>300€</precio>
+        <existencias estado="disponible" />
+    </articulo>
+</tienda>
