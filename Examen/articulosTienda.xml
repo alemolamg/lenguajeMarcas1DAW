@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "articulosTienda.dtd">
+<tienda>    barrio
+    <articulo nombre="Peonza">
+        <color nombre="Rojo" />
+        <color nombre="Azul" />
+        <precio>2€</precio>
+        <disponible />
+    </articulo>
+
+
+</tienda>
