@@ -1,11 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tienda SYSTEM "articulosTienda.dtd">
 <tienda>    barrio
-    <articulo nombre="Peonza">
+    <categoria nombreCat="juguetes" />
+    <categoria nombreCat="componentes" />
+    <categoria nombreCat="electrodomésticos" />
+
+    <articulo nombre="Peonza" categoria="juguetes">
         <color nombre="Rojo" />
         <color nombre="Azul" />
         <precio>2€</precio>
-        <disponible />
+        <existencias estado="disponible"/>
+    </articulo>
+    <articulo nombre="panelLed" categoria="componentes">
+        <precio>73€</precio>
+        <existencias />
+    </articulo>
+    <articulo nombre="mando">
+        <color nombre="negro" />
+        <precio>12€</precio>
+        <existencias />
+    </articulo>
+
+    <articulo nombre="Television" categoria="electrodomésticos"> 
+        <color nombre="negro" />
+        <color nombre="blanco" />
+        <color nombre="gris" />
+        <precio>300€</precio>
+        <existencias estado="disponible"/>
     </articulo>
 
 

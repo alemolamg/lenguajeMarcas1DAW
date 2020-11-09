@@ -1,12 +1,13 @@
-<!ELEMENT tienda (#PCDATA | articulo)*>
+<!ELEMENT tienda (#PCDATA | articulo | categoria)*>
 <!ELEMENT categoria EMPTY>
 <!ATTLIST categoria nombreCat ID #REQUIRED>
-<!ELEMENT articulo ( color*,precio, disponible?)+>
+<!ELEMENT articulo ( color*,precio, existencias?)+>
 <!ATTLIST articulo  nombre ID #REQUIRED
-                    categoria IDREF #IMPLIED>
+                    categoria IDREF #IMPLIED
+                    compuestoPor IDREFS #IMPLIED>
 
     <!ELEMENT color EMPTY>
     <!ATTLIST color nombre CDATA #REQUIRED>
     <!ELEMENT precio (#PCDATA)>
-    <!ELEMENT disponible EMPTY>
-    <!ATTLIST disponible existencias CDATA #FIXED "disponible">
+    <!ELEMENT existencias EMPTY>
+    <!ATTLIST existencias estado CDATA #FIXED "disponible">
