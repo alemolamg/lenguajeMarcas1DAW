@@ -1,33 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tienda SYSTEM "articulosTienda.dtd">
-<tienda>    barrio
+<tienda>
+    Tienda Multiusos ACME
     <categoria nombreCat="juguetes" />
     <categoria nombreCat="componentes" />
     <categoria nombreCat="electrodomésticos" />
-
     <articulo nombre="Peonza" categoria="juguetes">
-        <color nombre="Rojo" />
-        <color nombre="Azul" />
+        <color color="rojo" />
+        <color color="azul" />
         <precio>2€</precio>
-        <existencias estado="disponible"/>
+        <existencias estado="disponible" />
     </articulo>
     <articulo nombre="panelLed" categoria="componentes">
         <precio>73€</precio>
         <existencias />
     </articulo>
     <articulo nombre="mando">
-        <color nombre="negro" />
+        <color color="negro" />
         <precio>12€</precio>
         <existencias />
     </articulo>
-
-    <articulo nombre="Television" categoria="electrodomésticos"> 
-        <color nombre="negro" />
-        <color nombre="blanco" />
-        <color nombre="gris" />
+    <articulo nombre="Television" categoria="electrodomésticos" compuestoPor="mando panelLed">
+        <color color="negro" />
+        <color color="blanco" />
+        <color color="gris" />
         <precio>300€</precio>
-        <existencias estado="disponible"/>
+        <existencias estado="disponible" />
     </articulo>
-
-
 </tienda>
