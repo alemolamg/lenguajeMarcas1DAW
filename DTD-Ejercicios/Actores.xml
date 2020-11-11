@@ -1,0 +1,10 @@
+<Pelicula nombre="Star Wars: La amenaza Fantasma">
+    <Reparto>
+        <personaje nombre="Obi Wan Kenobi" actor= "Ewan McGregor"/>
+        <personaje nombre="Padme" actor= "Natalie Portman"/>
+        <personaje nombre="Anakin Skywalket" actor= "Jake Lloyd"/>
+        <personaje nombre="Qui-Gon Jinn" actor= "Liam Neeson"/>
+        <personaje nombre="Jar Jar Binks" actor= "Ahmed Best"/>
+        <personaje nombre="Palpatine" actor= "Ian McDiarmid"/>
+    </Reparto>
+</Pelicula>
