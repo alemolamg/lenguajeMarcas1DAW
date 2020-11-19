@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="alumno">
+        <xs:complexType >
+            <xs:sequence>
+                <xs:element name="nombre" />
+                <xs:element name="direccion"/>
+                <xs:element name="telefono"/>
+            </xs:sequence>    
+            <xs:attribute name="dni"/>
+            
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,12 @@
+<!-- Crea un fichero XSD que valide el siguiente XML --> 
+<hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="hotel.xsd">
+    <personaje nombre="Cleopatra">
+        <poder>No envejece</poder>
+        <poder>Transforma en animales</poder>
+        <poder>Rápido</poder>
+        <debilidad>Ajo</debilidad>
+        <debilidad>Sol</debilidad>
+        <debilidad>Estaca en el corazón</debilidad>
+    </personaje>
+</hotel>

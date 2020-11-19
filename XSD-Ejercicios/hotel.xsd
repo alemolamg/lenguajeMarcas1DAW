@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="hotel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personaje" maxOccurs="unbounded" type="tipoPersonaje"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="tipoPersonaje">
+        <xs:sequence>
+            <xs:element name="poder" maxOccurs="unbounded" type="minimo3Caracteres"/>
+            <xs:element name="debilidad" maxOccurs="unbounded" type="minimo3Caracteres"/>
+        </xs:sequence>
+        <xs:attribute name="nombre" type="personajesPosibles"></xs:attribute>
+    </xs:complexType>
+
+
+    <xs:simpleType name="personajesPosibles">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Cleopatra"/>
+            <xs:enumeration value="Drácula"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="minimo3Caracteres">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
