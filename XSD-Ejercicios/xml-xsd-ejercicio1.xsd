@@ -4,11 +4,25 @@
         <xs:complexType >
             <xs:sequence>
                 <xs:element name="nombre" />
-                <xs:element name="direccion"/>
-                <xs:element name="telefono"/>
+                <xs:element name="direccion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="calle"/>
+                            <xs:element name="numero"/>
+                            <xs:element name="ciudad"/>
+                            <xs:element name="provincia"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="telefono">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:pattern value="\d{9}"/>
+                        </xs:restriction>
+                    </xs:simpleType>    
+                </xs:element>
             </xs:sequence>    
-            <xs:attribute name="dni"/>
-            
+            <xs:attribute name="dni"/> 
         </xs:complexType>
     </xs:element>
 
