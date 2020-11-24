@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <universoMarvel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="xml-xsd-ejercicio5.xsd">
+xsi:noNamespaceSchemaLocation="xml-xsd-ejercicio4.xsd">
 	<personaje bando="de los buenos">Capitán América
 		<traje>
 			<creador>Él mismo</creador>
