@@ -10,6 +10,7 @@
     </xs:element>
 
     <xs:complexType name="caractPersonaje" mixed="true">
+        
         <xs:sequence>
             <xs:element name="traje" type="confTraje"/>
             <xs:element name="enemigo" maxOccurs="unbounded"/>
@@ -30,6 +31,9 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="tipoPersonaje">
+
+    </xs:complexType>
 
     <xs:complexType name="posibleColor">
         <xs:attribute name="valor">
