@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="universoMarvel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personaje" type="caractPersonaje" />
+            </xs:sequence>
+        </xs:complexType>
+        
+    </xs:element>
+
+    <xs:complexType name="caractPersonaje" mixed="true">
+        
+        <xs:sequence>
+            <xs:element name="traje" type="confTraje"/>
+            <xs:element name="enemigo" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="confTraje">
+        <xs:sequence>
+            <xs:element name="creador" type="xs:string"/>
+            <xs:element name="colores"> 
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="color" maxOccurs="unbounded" type="posibleColor"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoPersonaje">
+
+    </xs:complexType>
+
+    <xs:complexType name="posibleColor">
+        <xs:attribute name="valor">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="azul"/>
+                    <xs:enumeration value="verde"/>
+                    <xs:enumeration value="negro"/>
+                    <xs:enumeration value="rojo"/>
+                    <xs:enumeration value="amarillo"/>
+                    <xs:enumeration value="gris"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+</xs:schema>
