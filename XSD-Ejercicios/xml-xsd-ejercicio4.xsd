@@ -3,18 +3,24 @@
     <xs:element name="universoMarvel">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="personaje" type="caractPersonaje" />
+                <xs:element name="personaje" type="caractPersonaje" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
         
     </xs:element>
 
     <xs:complexType name="caractPersonaje" mixed="true">
-        
         <xs:sequence>
             <xs:element name="traje" type="confTraje"/>
             <xs:element name="enemigo" maxOccurs="unbounded"/>
         </xs:sequence>
+        <xs:attribute name="bando">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:minLength value="4"></xs:minLength>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
 
 
