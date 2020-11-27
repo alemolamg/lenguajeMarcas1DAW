@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<youtube xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="examenB.xsd">
+	<videos>
+		<video>El de la Cabra que parece que canta
+			<url>https://www.youtube.com/watch?v=3xQUF696nik</url>
+			<visualizaciones>112000</visualizaciones>
+			<comentarios>
+				<buenos>1200</buenos>
+				<malos>700</malos>
+			</comentarios>
+			<subscriptores>
+				<subscriptor codigo="15-[AR]-56">
+					<fechaSubscripcion dia="12" mes="febrero" anyo="2017"/>
+					<comentarios cantidad="12"/>
+					<correoElectronico completo="rafa@gmail.com">
+						<usuario>rafa</usuario>
+						<servidor><gmail/></servidor>
+					</correoElectronico>
+					<idioma>Korean</idioma>
+				</subscriptor>
+			</subscriptores>
+		</video>
+	</videos>
+	<publicidad>
+		<anuncio>
+			<empresa>Gilette</empresa>
+			<bannersPorMinuto>40000</bannersPorMinuto>
+		</anuncio>
+		<anuncioPatrocinado patrocinador="Google">
+			<empresa>Casa Tarradellas</empresa>
+			<bannersPorMinuto>15000</bannersPorMinuto>
+			<descuentoYouTube>23%</descuentoYouTube>
+		</anuncioPatrocinado>
+	</publicidad>
+	<idiomasDisponibles>Francés Italiano Alemán Inglés Chinese Korean Japanese</idiomasDisponibles>
+</youtube>
