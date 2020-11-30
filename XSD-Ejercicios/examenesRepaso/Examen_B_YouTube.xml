@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<youtube>
+<youtube xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Examen_B_Youtube.xsd">
 	<videos>
 		<video>El de la Cabra que parece que canta
 			<url>https://www.youtube.com/watch?v=3xQUF696nik</url>
