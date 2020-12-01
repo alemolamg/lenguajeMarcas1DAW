@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="youtube">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="videos" type="videosCaract"/>
+                <xs:element name="publicidad"/>
+                <xs:element name="idiomasDisponibles"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="videosCaract">
+        <xs:sequence>
+            <xs:element name="video">
+                <xs:complexType mixed="true">
+                    <xs:all>
+                        <xs:element name="url" type="xs:string"/>
+                        <xs:element name="visualizaciones" type="xs:integer"/>
+                        <xs:element name="comentarios" type="tipoComentario"/>
+                        <xs:element name="subscriptores"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoComentario">
+        <xs:sequence>
+            <xs:element name="buenos" type="xs:integer"/>
+            <xs:element name="malos" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="caractSuscriptores">
+            <xs:sequence>
+                <xs:element name="subscriptor" type="tipoSuscriptor"/>
+            </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoSuscriptor" mixed="true">
+        <xs:sequence>
+            <xs:element name="fechaSubscripcion"/>
+            <xs:element name="comentarios"/>
+            <xs:element name="correoElectronico"/>
+            <xs:element name="idioma"/>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="codigoRestric"/>
+    </xs:complexType>
+
+
+    <xs:simpleType name="codigoRestric">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
