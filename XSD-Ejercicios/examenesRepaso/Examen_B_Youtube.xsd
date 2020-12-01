@@ -42,18 +42,40 @@
 
     <xs:complexType name="tipoSuscriptor" mixed="true">
         <xs:sequence>
-            <xs:element name="fechaSubscripcion"/>
-            <xs:element name="comentarios"/>
+            <xs:element name="fechaSubscripcion" type="tipoFechaSub"/>
+            <xs:element name="comentarios" type="comentarioSuscriptor"/>
             <xs:element name="correoElectronico"/>
             <xs:element name="idioma"/>
         </xs:sequence>
         <xs:attribute name="codigo" type="codigoRestric"/>
     </xs:complexType>
 
+    <xs:complexType name="comentarioSuscriptor">
+        <xs:attribute name="cantidad"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoFechaSub">
+        <xs:attribute name="dia"/>
+        <xs:attribute name="mes"/>
+        <xs:attribute name="anyo" type="tipoAnyo"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoAnyo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="2015"/>
+            <xs:enumeration value="2016"/>
+            <xs:enumeration value="2017"/>
+            <xs:enumeration value="2018"/>
+            <xs:enumeration value="2019"/>
+            <xs:enumeration value="2020"/>
+            <xs:enumeration value="2021"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:simpleType name="codigoRestric">
         <xs:restriction base="xs:string">
-            <xs:pattern value="" />
+            <xs:pattern value="\d{2}-[\[][A-Z][\]]-\d{2}"/> <!-- Todo elemento debe ir entre corchetes -->
         </xs:restriction>
     </xs:simpleType>
 
