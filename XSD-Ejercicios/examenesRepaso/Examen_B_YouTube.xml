@@ -30,7 +30,7 @@ xsi:noNamespaceSchemaLocation="Examen_B_Youtube.xsd">
 		<anuncioPatrocinado patrocinador="Google">
 			<empresa>Casa Tarradellas</empresa>
 			<bannersPorMinuto>15000</bannersPorMinuto>
-			<descuentoYouTuve>23%</descuentoYouTuve>
+			<descuentoYouTube>23%</descuentoYouTube>
 		</anuncioPatrocinado>
 	</publicidad>
 	<idiomasDisponibles>Francés Italiano Alemán Inglés Chinese Korean Japanese</idiomasDisponibles>

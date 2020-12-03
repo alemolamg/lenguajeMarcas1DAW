@@ -4,7 +4,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="videos" type="videosCaract"/>
-                <xs:element name="publicidad"/>
+                <xs:element name="publicidad" type="tipoPublicidad"/>
                 <xs:element name="idiomasDisponibles"/>
             </xs:sequence>
         </xs:complexType>
@@ -16,7 +16,7 @@
                 <xs:complexType mixed="true">
                     <xs:all>
                         <xs:element name="url" type="xs:string"/>
-                        <xs:element name="visualizaciones" type="xs:integer"/>
+                        <xs:element name="visualizaciones" type="tipoVisualizaciones"/>
                         <xs:element name="comentarios" type="tipoComentario"/>
                         <xs:element name="subscriptores" type="caractSuscriptores"/>
                     </xs:all>
@@ -28,7 +28,7 @@
 
     <xs:complexType name="tipoComentario">
         <xs:sequence>
-            <xs:element name="buenos" type="xs:integer"/>
+            <xs:element name="buenos" type="tipoComBuenos"/>
             <xs:element name="malos" type="xs:integer"/>
         </xs:sequence>
     </xs:complexType>
@@ -106,6 +106,47 @@
     <xs:simpleType name="codigoRestric">
         <xs:restriction base="xs:string">
             <xs:pattern value="\d{2}-[\[][A-Z]{2}[\]]-\d{2}"/> <!-- Todo elemento extraño debe ir entre corchetes -->
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="tipoPublicidad">
+        <xs:sequence>
+            <xs:element name="anuncio" type="tipoAnuncio"/>
+            <xs:element name="anuncioPatrocinado" type="tipoAnuncioPatrocinado"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoAnuncio">
+        <xs:sequence>
+            <xs:element name="empresa" type="xs:string"/>
+            <xs:element name="bannersPorMinuto" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoAnuncioPatrocinado">
+        <xs:complexContent>
+            <xs:extension base="tipoAnuncio">
+                <xs:sequence>
+                    <xs:element name="descuentoYouTube" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="patrocinador"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:simpleType name="tipoVisualizaciones">
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="100000000"/>
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoComBuenos">
+        <xs:restriction base="tipoVisualizaciones">
+            <xs:maxInclusive value="200000"/>
         </xs:restriction>
     </xs:simpleType>
 
