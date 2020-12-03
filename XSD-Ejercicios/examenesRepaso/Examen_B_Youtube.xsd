@@ -5,7 +5,7 @@
             <xs:sequence>
                 <xs:element name="videos" type="videosCaract"/>
                 <xs:element name="publicidad" type="tipoPublicidad"/>
-                <xs:element name="idiomasDisponibles"/>
+                <xs:element name="idiomasDisponibles" type="tipoIdiomasDisp"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -149,5 +149,22 @@
             <xs:maxInclusive value="200000"/>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:simpleType name="tipoIdiomasDisp">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Francés"/>
+            <xs:enumeration value="Italiano"/>
+            <xs:enumeration value="Alemán"/>
+            <xs:enumeration value="Inglés"/>
+            <xs:enumeration value="Chinese"/>
+            <xs:enumeration value="Korean"/>
+            <xs:enumeration value="Japanese"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+
 
 </xs:schema>
