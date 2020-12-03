@@ -18,7 +18,7 @@
                         <xs:element name="url" type="xs:string"/>
                         <xs:element name="visualizaciones" type="xs:integer"/>
                         <xs:element name="comentarios" type="tipoComentario"/>
-                        <xs:element name="subscriptores"/>
+                        <xs:element name="subscriptores" type="caractSuscriptores"/>
                     </xs:all>
                 </xs:complexType>
             </xs:element>
@@ -40,12 +40,12 @@
     </xs:complexType>
 
 
-    <xs:complexType name="tipoSuscriptor" mixed="true">
+    <xs:complexType name="tipoSuscriptor" >
         <xs:sequence>
             <xs:element name="fechaSubscripcion" type="tipoFechaSub"/>
             <xs:element name="comentarios" type="comentarioSuscriptor"/>
             <xs:element name="correoElectronico"/>
-            <xs:element name="idioma"/>
+            <xs:element name="idioma" type="idiomasDisponibles"/>
         </xs:sequence>
         <xs:attribute name="codigo" type="codigoRestric"/>
     </xs:complexType>
@@ -73,9 +73,39 @@
         </xs:restriction>
     </xs:simpleType>
 
+
+    <xs:simpleType name="idiomasDisponibles">
+        <xs:union memberTypes="idiomasEng idiomasEsp"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="idiomasEsp">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Francés"/>
+            <xs:enumeration value="Italiano"/>
+            <xs:enumeration value="Alemán"/>
+            <xs:enumeration value="Inglés"/>
+            <xs:enumeration value="Chino"/>
+            <xs:enumeration value="Coreano"/>
+            <xs:enumeration value="Japones"/>            
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idiomasEng">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="French"/>
+            <xs:enumeration value="Italian"/>
+            <xs:enumeration value="German"/>
+            <xs:enumeration value="English"/>
+            <xs:enumeration value="Chinesse"/>
+            <xs:enumeration value="Korean"/>
+            <xs:enumeration value="Japanish"/>            
+        </xs:restriction>
+    </xs:simpleType>
+
+
     <xs:simpleType name="codigoRestric">
         <xs:restriction base="xs:string">
-            <xs:pattern value="\d{2}-[\[][A-Z][\]]-\d{2}"/> <!-- Todo elemento debe ir entre corchetes -->
+            <xs:pattern value="\d{2}-[\[][A-Z]{2}[\]]-\d{2}"/> <!-- Todo elemento extraño debe ir entre corchetes -->
         </xs:restriction>
     </xs:simpleType>
 
