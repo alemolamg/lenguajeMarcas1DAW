@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ofertasBlackFriday">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="articulo" type="tipoArticulo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="tipoArticulo" mixed="true">
+        <xs:all>
+            <xs:element name="fabricante" type="tipoFabricante"/>
+            <xs:element name="oferta" type="tipoOferta"/>
+            <xs:element name="valoraciones"/>
+            <xs:element name="preguntas"/>
+            <xs:element name="agregadoACestaDeCompra"/>
+        </xs:all>
+        <xs:attribute name="codigo"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoFabricante">
+        <xs:choice>
+            <xs:element name="canon"/>
+            <xs:element name="epson"/>
+            <xs:element name="samsung"/>
+            <xs:element name="apple"/>
+            <xs:element name="philips"/>
+        </xs:choice>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoOferta" mixed="true">
+        <xs:simpleContent>
+            <xs:extension base="decimalesOferta">
+                <xs:attribute name="precioHabitual" type="tipoPrecioHabitual"/>
+                <xs:attribute name="descuento"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="decimalesOferta">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d+[.]\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoPrecioHabitual">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="\d+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
