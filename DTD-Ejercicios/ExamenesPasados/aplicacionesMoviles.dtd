@@ -1,0 +1,9 @@
+<!ELEMENT aplicacionesMoviles (#PCDATA)>
+<!ELEMENT tienda (#PCDATA | aplicacion | categoria)*>
+<!ELEMENT aplicacion (tamanio, version,categoria+, disponible?)>
+<!ATTLIST aplicacion nombre ID #REQUIRED>
+    <!ELEMENT tamanio (#PCDATA)>
+    <!ELEMENT version (#PCDATA)>
+    <!ELEMENT disponible EMPTY>
+    <!ELEMENT categoria EMPTY>
+    <!ATTLIST categoria nombreCat ID #REQUIRED>

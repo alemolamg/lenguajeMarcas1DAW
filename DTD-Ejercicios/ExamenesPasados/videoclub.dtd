@@ -1,0 +1,17 @@
+<!ELEMENT videoclub (almacen)>
+<!ELEMENT almacen (pelicula | serie | videojuego)*>
+
+<!ELEMENT pelicula (nombre,anio,director+,disponible?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT director EMPTY>
+    <!ATTLIST director nombre CDATA #REQUIRED>
+    <!ELEMENT disponible EMPTY>
+
+<!ELEMENT serie (nombre,temporada+)>
+    <!ELEMENT temporada (numTemporada, director+, anio,disponible?)+>
+    <!ELEMENT numTemporada (#PCDATA)>
+
+<!ELEMENT videojuego (nombre, compania, plataforma+, anio,disponible?)>
+    <!ELEMENT plataforma (#PCDATA)>
+    <!ELEMENT compania (#PCDATA)>
