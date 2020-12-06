@@ -13,13 +13,51 @@
         <xs:all>
             <xs:element name="fabricante" type="tipoFabricante"/>
             <xs:element name="oferta" type="tipoOferta"/>
-            <xs:element name="valoraciones"/>
-            <xs:element name="preguntas"/>
-            <xs:element name="agregadoACestaDeCompra"/>
+            <xs:element name="valoraciones" type="tipoValoraciones"/>
+            <xs:element name="preguntas" type="tipoPreguntas"/>
+            <xs:element name="agregadoACestaDeCompra" type="tipoAregadoACestaDeCompra"/>
         </xs:all>
         <xs:attribute name="codigo"/>
     </xs:complexType>
 
+    <xs:complexType name="tipoValoraciones">
+        <xs:sequence>
+            <xs:element name="positiva" type="valPositivaNegativa"/>
+            <xs:element name="negativa" type="valPositivaNegativa"/>
+            <xs:element name="masVotada" type="valMasVotada"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="valPositivaNegativa">
+        <xs:sequence>
+            <xs:element name="autor" type="nombresPosibles"/>
+            <xs:element name="texto" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="valMasVotada">
+        <xs:complexContent>
+            <xs:extension base="valPositivaNegativa">
+                <xs:sequence>
+                    <xs:element name="fecha" type="tipoFecha"/>
+                </xs:sequence>
+                <xs:attribute name="votosFavorables"/>
+                <xs:attribute name="votosDesfavorables"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="tipoFecha" mixed="true">
+        <xs:simpleContent>
+            <xs:extension base="caracteristicaFecha"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="caracteristicaFecha">
+        <xs:restriction base="xs:string">
+                <xs:pattern value="\d{1,2}[/]\d{2}[/]\d{4}[ ]\d{2}[:]\d{2}[:]\d{2}[ ](PM|AM)"/>
+            </xs:restriction>
+    </xs:simpleType>
 
     <xs:complexType name="tipoFabricante">
         <xs:choice>
@@ -36,20 +74,128 @@
         <xs:simpleContent>
             <xs:extension base="decimalesOferta">
                 <xs:attribute name="precioHabitual" type="tipoPrecioHabitual"/>
-                <xs:attribute name="descuento"/>
+                <xs:attribute name="descuento" type = "tipoDescuento"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
 
-    <xs:simpleType name="decimalesOferta">
+    <xs:simpleType name="baseParaOfertas">
         <xs:restriction base="xs:string">
-            <xs:pattern value="\d+[.]\d{2}"/>
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoDescuento">
+        <xs:restriction base="baseParaOfertas">
+            <xs:pattern value="\d{1,2}%"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="decimalesOferta">
+        <xs:restriction base="baseParaOfertas">
+            <xs:pattern value="\d+[.]\d{2}" />
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="tipoPrecioHabitual">
-        <xs:restriction base="xs:integer">
+        <xs:restriction base="baseParaOfertas">
             <xs:pattern value="\d+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="tipoPreguntas">
+        <xs:sequence>
+            <xs:element name="pregunta" type="tipoPregunta" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoPregunta">
+        <xs:complexContent>
+            <xs:extension base="valPositivaNegativa">
+                <xs:sequence>
+                    <xs:element name="respuestas" type="tipoRespuestas"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="tipoRespuestas">
+        <xs:sequence>
+            <xs:element name="respuesta" type="tipoRespuesta" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoRespuesta" mixed="true">
+        <xs:sequence>
+            <xs:element name="votantesEnPositivo" type="listaNombres"/> <!-- será type lista-->
+            <xs:element name="votantesEnNegativo" type="listaNombres"/> <!-- será type lista-->
+        </xs:sequence>
+        <xs:attribute name="autor" type="nombresPosibles"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipoAregadoACestaDeCompra" mixed="true">
+        <xs:simpleContent>
+            <xs:extension base="caractCestaCompra">
+                <xs:attribute name="value"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:simpleType name="caractCestaCompra">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(lunes|martes|miércoles|jueves|viernes|sábado|domingo)[ ]\d{1,2}[ ](de)[ ](enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)[ ](de)[ ]\d{4}"/>
+        </xs:restriction> 
+    </xs:simpleType>
+
+    <xs:simpleType name="nombresPosibles">
+        <xs:union memberTypes="nombresHombres nombresMujeres"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="listaNombres">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Carmen"/>
+                    <xs:enumeration value="Araceli"/>
+                    <xs:enumeration value="Estela"/>
+                    <xs:enumeration value="Lucía"/>
+                    <xs:enumeration value="Silvia"/>
+                    <xs:enumeration value="Inma"/>
+                    <xs:enumeration value="Pedro"/>
+                    <xs:enumeration value="Juan"/>
+                    <xs:enumeration value="Pablo"/>
+                    <xs:enumeration value="Rafa"/>
+                    <xs:enumeration value="Álvaro"/>
+                    <xs:enumeration value="Javier"/>
+                    <xs:enumeration value="Gonzalo"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+
+    <xs:simpleType name="nombresMujeres">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Carmen"/>
+            <xs:enumeration value="Araceli"/>
+            <xs:enumeration value="Estela"/>
+            <xs:enumeration value="Lucía"/>
+            <xs:enumeration value="Silvia"/>
+            <xs:enumeration value="Inma"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nombresHombres">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Pedro"/>
+            <xs:enumeration value="Juan"/>
+            <xs:enumeration value="Pablo"/>
+            <xs:enumeration value="Rafa"/>
+            <xs:enumeration value="Álvaro"/>
+            <xs:enumeration value="Javier"/>
+            <xs:enumeration value="Gonzalo"/>
         </xs:restriction>
     </xs:simpleType>
 
