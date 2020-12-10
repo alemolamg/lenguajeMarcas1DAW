@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pedidosMuebles">
+
+
+    </xs:element>
+
+    <xs:complexType name="muebleCaract">
+        <xs:sequence>
+            <xs:element name="color"/>
+            <xs:element name="anchura"/>
+            <xs:element name="altura"/>
+            <xs:element name="profundidad"/>
+            <xs:element name="tipoMadera"/>
+            <xs:element name="delicado"/>
+            <xs:element name="vendido"/>
+            <xs:element name="serie"/>
+        </xs:sequence>
+        <xs:attribute name="modelo" />
+        <xs:attribute name="anioFabricacion" />
+
+    </xs:complexType>
+
+
+</xs:schema>
