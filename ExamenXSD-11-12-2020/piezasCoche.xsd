@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="piezasCoche">
+        <xs:complexType>
+            <!-- xs:sequence permite añadir elementos, pero debemos añadir todos
+                los elementos especificados para que funcione.  -->
+            <xs:sequence >
+                <xs:element name="coche" type="cocheCaract"/>
+                <xs:element name="piezas" type="tipoPiezas"/>
+                <xs:element name="disponibilidad"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="cocheCaract">
+        <xs:attribute name="marca" type="xs:string"/>
+        <xs:attribute name="modelo" type="xs:string"/>
+        <xs:attribute name="anioConstruccion" type="xs:integer"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoPiezas">
+        <!-- xs:all permite elegir los elementos en el orden que queramos
+            y cuantos queramos, pero no permite elegir un elemento más de una vez-->
+        <xs:all>
+            <xs:element name="motor" type="tipoMotor"/>
+            <xs:element name="neumaticos"/>
+            <xs:element name="materialDeChasis"/>
+            <xs:element name="carroceria"/>
+            <xs:element name="parabrisas"/>
+            <xs:element name="asientos"/>
+            <xs:element name="tapiceria"/>
+        </xs:all>
+    </xs:complexType>
+    
+
+    <xs:complexType name="tipoMotor" mixed="true">
+        <xs:all>
+            <xs:element name="modelo">
+                <xs:complexType mixed="true">
+                    <xs:simpleContent>
+                        <xs:extension base="minDosLetras">
+                            <xs:attribute name="potencia" type="xs:string"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:simpleType name="minDosLetras">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    
+</xs:schema>

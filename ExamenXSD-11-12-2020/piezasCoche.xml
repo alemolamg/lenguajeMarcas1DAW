@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<piezasCoche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="piezasCoche.xsd">
+    <coche marca="Seat" modelo="Ibiza" anioConstruccion="2010"/>
+    <piezas>
+        <motor>Motor polifacético, con potencia suficiente
+            <modelo potencia="300 caballos">Seat-14-v14</modelo>
+        </motor>
+        <neumaticos anchura="195" altura="55" diametro="20 pulgadas"/>
+        <materialDeChasis>
+            <aluminio/> <!-- Otros valores válidos serán <titani> y <tungsteno> -->
+        </materialDeChasis>
+        <carroceria>Seat-IB300</carroceria>
+        <parabrisas>25pulgadas</parabrisas> <!-- Otros valores posibles serían "50cm" "30pulgadas" "45cm"... valores que comienzan por un número seguido de "pulgadas" o "cm" -->
+        <asientos cantidad="4">
+            <fabricante>Asientos unidos jamás serán vencidos</fabricante>
+            <fechaFabricacion>Noviembre de 2009</fechaFabricacion>
+            <comodidad>Comodísimos</comodidad>
+        </asientos>
+        <tapiceria>
+            <fabricante>Tapiceros unidos jamás serán vencidos</fabricante>
+            <fechaFabricacion>febrero de 2009</fechaFabricacion>
+        </tapiceria>
+    </piezas>
+    <disponibilidad>www.seat.com www.recambiosseat.com www.piratas.com</disponibilidad>
+</piezasCoche>
