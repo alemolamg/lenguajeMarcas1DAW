@@ -7,7 +7,7 @@
             <xs:sequence >
                 <xs:element name="coche" type="cocheCaract"/>
                 <xs:element name="piezas" type="tipoPiezas"/>
-                <xs:element name="disponibilidad"/>
+                <xs:element name="disponibilidad" type="listaPagWebs"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -26,9 +26,9 @@
         <xs:all>
             <xs:element name="motor" type="tipoMotor"/>
             <xs:element name="neumaticos"/>
-            <xs:element name="materialDeChasis"/>
-            <xs:element name="carroceria"/>
-            <xs:element name="parabrisas"/>
+            <xs:element name="materialDeChasis" type="tipoMaterialChasis"/>
+            <xs:element name="carroceria" type="CarroceriaCaract"/>
+            <xs:element name="parabrisas" type="tipoParabrisas"/>
             <xs:element name="asientos"/>
             <xs:element name="tapiceria"/>
         </xs:all>
@@ -49,11 +49,58 @@
         </xs:all>
     </xs:complexType>
 
+    <xs:complexType name="tipoMaterialChasis">
+        <xs:choice>
+            <xs:element name="aluminio"/>
+            <xs:element name="tungsteno"/>
+            <xs:element name="titanio"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="tipoParabrisas" mixed="true">
+        <xs:simpleContent>
+            <xs:extension base="tiposDeMedidas"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="medidasPulgadas">
+        <xs:restriction base="xs:string"> 
+            <xs:pattern value="\d+[ ]pulgadas"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="medidasCm">
+        <xs:restriction base="xs:string"> 
+            <xs:pattern value="\d+[ ]cm"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tiposDeMedidas">
+        <xs:union memberTypes="medidasCm medidasPulgadas"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="CarroceriaCaract">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(Seat|Volkswagen)[-][A-Z]{2}\d{1,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="listaPagWebs">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                <xs:enumeration value="www.seat.com"/>
+                <xs:enumeration value="www.recambiosseat.com"/>
+                <xs:enumeration value="www.piratas.com"/>
+            </xs:restriction>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+
     <xs:simpleType name="minDosLetras">
         <xs:restriction base="xs:string">
             <xs:minLength value="2"/>
         </xs:restriction>
     </xs:simpleType>
-
     
 </xs:schema>
