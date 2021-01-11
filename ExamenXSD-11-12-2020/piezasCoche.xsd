@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="piezasCoche">
+        <xs:complexType>
+            <!-- xs:sequence permite añadir elementos, pero debemos añadir todos
+                los elementos especificados para que funcione.  -->
+            <xs:sequence >
+                <xs:element name="coche" type="cocheCaract"/>
+                <xs:element name="piezas" type="tipoPiezas"/>
+                <xs:element name="disponibilidad" type="listaPagWebs"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="cocheCaract">
+        <xs:attribute name="marca" type="xs:string"/>
+        <xs:attribute name="modelo" type="xs:string"/>
+        <xs:attribute name="anioConstruccion" type="xs:integer"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoPiezas">
+        <!-- xs:all permite elegir los elementos en el orden que queramos
+            y cuantos queramos, pero no permite elegir un elemento más de una vez-->
+        <xs:all>
+            <xs:element name="motor" type="tipoMotor"/>
+            <xs:element name="neumaticos" type="tipoNeumaticos"/>
+            <xs:element name="materialDeChasis" type="tipoMaterialChasis"/>
+            <xs:element name="carroceria" type="CarroceriaCaract"/>
+            <xs:element name="parabrisas" type="tipoParabrisas"/>
+            <xs:element name="asientos" type="caractAsientos"/>
+            <xs:element name="tapiceria" type="caractTapiceria"/>
+        </xs:all>
+    </xs:complexType>
+    
+
+    <xs:complexType name="tipoMotor" mixed="true">
+        <xs:all>
+            <xs:element name="modelo">
+                <xs:complexType mixed="true">
+                    <xs:simpleContent>
+                        <xs:extension base="minDosLetras">
+                            <xs:attribute name="potencia" type="xs:string"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoMaterialChasis">
+        <xs:choice>
+            <xs:element name="aluminio"/>
+            <xs:element name="tungsteno"/>
+            <xs:element name="titanio"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="tipoParabrisas" mixed="true">
+        <xs:simpleContent>
+            <xs:extension base="tiposDeMedidas"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="medidasPulgadas">
+        <xs:restriction base="xs:string"> 
+            <xs:pattern value="\d+[ ]pulgadas"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="medidasCm">
+        <xs:restriction base="xs:string"> 
+            <xs:pattern value="\d+[ ]cm"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tiposDeMedidas">
+        <xs:union memberTypes="medidasCm medidasPulgadas"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="CarroceriaCaract">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(Seat|Volkswagen)[-][A-Z]{2}\d{1,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tipoNeumaticos">
+        <xs:attribute name="anchura" type="caractAnchura"/>
+        <xs:attribute name="altura" type="caractAltura"/>
+        <xs:attribute name="diametro" type="medidasPulgadas"/>
+    </xs:complexType>
+
+    <xs:simpleType name="caractAnchura">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="\d{1,3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="caractAltura">
+        <xs:restriction base="caractAnchura">
+            <xs:pattern value="\d{1,2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="caractTapiceria">
+        <xs:sequence>
+            <xs:element name="fabricante" type="tipoFabricante" />
+            <xs:element name="fechaFabricacion" type="caractFechaFab"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="caractAsientos" >
+        <xs:complexContent>
+            <xs:extension base="caractTapiceria">
+                <xs:sequence>
+                    <xs:element name="comodidad"/>
+                </xs:sequence>
+            <xs:attribute name="cantidad"/>
+            </xs:extension>
+        </xs:complexContent>
+        
+    </xs:complexType>
+
+    <xs:complexType name="tipoFabricante" mixed="true"/>
+    <xs:complexType name="caractFechaFab" mixed="true"/>
+
+    <xs:simpleType name="listaPagWebs">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                <xs:enumeration value="www.seat.com"/>
+                <xs:enumeration value="www.recambiosseat.com"/>
+                <xs:enumeration value="www.piratas.com"/>
+            </xs:restriction>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+
+    <xs:simpleType name="minDosLetras">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
