@@ -1,0 +1,10 @@
+body{
+    background: rgb(151, 151, 151);
+}
+
+#divPrincipal {
+    background: rgb(19, 1, 54);
+    color: white;
+    width: 88%;
+    margin: auto;
+}
