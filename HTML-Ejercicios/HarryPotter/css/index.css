@@ -1,5 +1,11 @@
 body{
     background: rgb(151, 151, 151);
+    font-family: 'Lato', sans-serif;
+}
+
+.centrarDiv {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #divPrincipal {
@@ -39,5 +45,28 @@ body{
 .tarjeta img{
     width: 100%;
     height: 240px;
+}
+
+#menuPrincipal {
+    background: black;
+    text-align: center;
+    position: fixed;
+    width: 90%;
+}
+
+#menuPrincipal li{
+    display: inline-block;
+    color: white;
+    width: 150px;
+}
+
+#menuPrincipal li:hover{
+    background: grey;
+    color: bisque;
+}
+
+#menuPrincipal a {
+    color: white;
+    text-decoration: underline;
 }
 
