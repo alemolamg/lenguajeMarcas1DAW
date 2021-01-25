@@ -1,11 +1,72 @@
 body{
     background: rgb(151, 151, 151);
+    font-family: 'Lato', sans-serif;
+}
+
+.centrarDiv {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #divPrincipal {
-    background: rgb(19, 1, 54);
-    color: white;
+    background: rgb(146, 101, 17);
+    color: black;
     width: 88%;
     margin: auto;
+}
+
+#imagenBanner{
+    display: inline-block;
+    width: 20%;
+}
+
+#textBanner{
+    display: inline-block;
+    background: white;
+    vertical-align: top;
+}
+
+.fila{
+    background: darkviolet;
+    /*text-align: center;*/
+    margin-top: 5px;
+}
+
+.tarjeta {
+    margin: 0 auto;
+    display: inline-block;
+    width: 24%;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+.tarjeta img{
+    width: 100%;
+    height: 240px;
+}
+
+#menuPrincipal {
+    background: black;
+    text-align: center;
+    position: fixed;
+    width: 90%;
+}
+
+#menuPrincipal li{
+    display: inline-block;
+    color: white;
+    width: 150px;
+}
+
+#menuPrincipal li:hover{
+    background: grey;
+    color: bisque;
+}
+
+#menuPrincipal a {
+    color: white;
+    text-decoration: underline;
 }
 
