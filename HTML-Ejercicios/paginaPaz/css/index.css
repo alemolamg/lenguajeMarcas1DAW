@@ -4,3 +4,21 @@ body{
     background-repeat: no-repeat ;
 
 }
+
+#menuPrincipal {
+    background: black;
+    text-align: center;
+    position: fixed;
+    width: 90%;
+    /*color: aqua;*/
+}
+
+#menuPrincipal li{
+    display: inline-block;
+    color: aqua;
+    width: 150px;
+}
+
+#menuPricipal li:hover{
+    background: grey;
+}
