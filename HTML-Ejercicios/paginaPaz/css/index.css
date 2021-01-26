@@ -1,24 +1,29 @@
 body{
-    /*background:url("../images/mapamundi01.jpg"); */
-    background-image: url("../images/mapamundi01.jpg");
+   /* background:url("../images/mapamundi01.jpg"); 
+    /*background-image: url("../images/mapamundi01.jpg");*/
     background-repeat: no-repeat ;
-
+    /*background: grey;*/
 }
 
-#menuPrincipal {
+.barraInicio {
     background: black;
-    text-align: center;
-    position: fixed;
-    width: 90%;
-    /*color: aqua;*/
 }
 
-#menuPrincipal li{
-    display: inline-block;
-    color: aqua;
-    width: 150px;
+.anchoPrincipal {
+    width: 80%;
+    margin: auto;
 }
 
-#menuPricipal li:hover{
-    background: grey;
+#divPrincipal{
+    /*background: turquoise;*/
+    background:url("../images/mapamundi01.jpg");
+    vertical-align: top;
 }
+
+#barraPrincipal{
+    
+}
+
+
+
+
