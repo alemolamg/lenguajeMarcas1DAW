@@ -8,6 +8,7 @@ Repositorio con el contenido de Lenguaje de marcas estudiado en 1º DAW.
     * [Examen Black Friday](https://github.com/alemolamg/lenguajeMarcas1DAW/tree/main/XSD-Ejercicios/examenesRepaso/examenBlackFriday)
 
 *Temario HTML*
-  - [Web Harry Potter](https://github.com/alemolamg/lenguajeMarcas1DAW/HTML-Ejercicios/HarryPotter)
+  - [Web Harry Potter](https://github.com/alemolamg/lenguajeMarcas1DAW/tree/main/HTML-Ejercicios/HarryPotter)
+  - [Página de a Paz](https://github.com/alemolamg/lenguajeMarcas1DAW/tree/main/HTML-Ejercicios/paginaPaz)
 
 *Importante*: 
