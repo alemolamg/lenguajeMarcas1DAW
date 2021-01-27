@@ -1,8 +1,8 @@
 body{
-   /* background:url("../images/mapamundi01.jpg"); 
+    /*background:url("../images/mapamundi01.jpg"); */
+    background: black;
     /*background-image: url("../images/mapamundi01.jpg");*/
     background-repeat: no-repeat ;
-    background: grey;
 }
 
 h1{
@@ -10,6 +10,8 @@ h1{
     text-align: right;
     
 }
+
+/*  Clases  */
 
 .barraInicio {
     background: black;
@@ -20,9 +22,14 @@ h1{
     margin: auto;
 }
 
+.divTexto{
+    background: green;
+}
+
+/*  ids */
 #divPrincipal{
-    /*background: turquoise;*/
-    background:url("../images/mapamundi01.jpg");
+    background: beige;
+    /*background:url("../images/mapamundi01.jpg");*/
     vertical-align: top;
 }
 
@@ -51,4 +58,6 @@ h1{
     color: red;
 }
 
-
+#mapaMundi{
+    background: pink;
+}
