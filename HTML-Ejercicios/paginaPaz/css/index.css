@@ -2,7 +2,13 @@ body{
    /* background:url("../images/mapamundi01.jpg"); 
     /*background-image: url("../images/mapamundi01.jpg");*/
     background-repeat: no-repeat ;
-    /*background: grey;*/
+    background: grey;
+}
+
+h1{
+    color: black;
+    text-align: right;
+    
 }
 
 .barraInicio {
@@ -21,9 +27,28 @@ body{
 }
 
 #barraPrincipal{
-    
+    background: blue;
+    text-align: center;
+    width: 100%;
+    font-size: 25pt;
 }
 
+#barraPrincipal li{
+    display: inline-block;
+    color: red;
+    align-items: center;
+    margin: auto;
+    width: 28%;
+    height: 35pt;
+}
 
+#barraPrincipal li:hover{
+    background: grey;
+}
+
+#barraPrincipal a{
+    text-decoration: none;
+    color: red;
+}
 
 
