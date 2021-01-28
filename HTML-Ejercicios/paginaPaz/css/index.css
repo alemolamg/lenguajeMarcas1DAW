@@ -1,28 +1,44 @@
 body{
-   /* background:url("../images/mapamundi01.jpg"); 
+    background:url("../images/mapamundi01.jpg"); 
+    background: black;
     /*background-image: url("../images/mapamundi01.jpg");*/
-    background-repeat: no-repeat ;
-    background: grey;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Dejar imagen fija*/
 }
 
 h1{
     color: black;
-    text-align: right;
-    
+    text-align: center;
+    text-decoration: underline;    
 }
+
+/*  Clases  */
 
 .barraInicio {
     background: black;
 }
 
 .anchoPrincipal {
-    width: 80%;
+    width: 88%;
     margin: auto;
 }
 
+.divTexto{
+    background: green;
+}
+
+.mapaMundi{
+    background: pink;
+}
+
+.mapaMundi img{
+    /*width: 100%;*/
+}
+
+/*  ids */
 #divPrincipal{
-    /*background: turquoise;*/
-    background:url("../images/mapamundi01.jpg");
+    background: beige;
+    /*background:url("../images/mapamundi01.jpg");*/
     vertical-align: top;
 }
 
@@ -51,4 +67,7 @@ h1{
     color: red;
 }
 
-
+#tablaCelebridad img{
+    width: 75%;
+    align-items: center;
+}
