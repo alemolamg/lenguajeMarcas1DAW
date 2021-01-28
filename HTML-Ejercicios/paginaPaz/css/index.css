@@ -1,6 +1,6 @@
 body{
     background:url("../images/mapamundi01.jpg"); 
-    background: black;
+    /*background: black;*/
     /*background-image: url("../images/mapamundi01.jpg");*/
     background-repeat: no-repeat;
     background-attachment: fixed; /* Dejar imagen fija*/
