@@ -1,8 +1,8 @@
 body{
-    background:url("../images/mapamundi01.jpg"); 
-    /*background: black;*/
+    background:url("../images/fondo03.v2.jpg"); 
+    /*background:rgba(204, 203, 203, 0.575);
     /*background-image: url("../images/mapamundi01.jpg");*/
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-attachment: fixed; /* Dejar imagen fija*/
 }
 
@@ -24,27 +24,32 @@ h1{
 }
 
 .divTexto{
-    background: green;
+   background:darkblue;
+}
+
+.divTexto table{
+    background:rgba(245, 245, 220, 0.74);
 }
 
 .mapaMundi{
-    background: pink;
+    margin-top: 0%;
+    background: greenyellow;
+    
 }
 
-.mapaMundi img{
-    /*width: 100%;*/
-}
 
 /*  ids */
 #divPrincipal{
-    background: beige;
+    background: rgb(180, 180, 159);
     /*background:url("../images/mapamundi01.jpg");*/
     vertical-align: top;
+    margin-top: -2%;
 }
 
 #barraPrincipal{
-    background: blue;
+    background: rgba(129, 129, 129, 0.897);
     text-align: center;
+    margin-top: 0%;
     width: 100%;
     font-size: 25pt;
 }
