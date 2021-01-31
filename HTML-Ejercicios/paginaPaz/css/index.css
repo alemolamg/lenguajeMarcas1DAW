@@ -24,21 +24,22 @@ h1{
 }
 
 .divTexto{
-   background:darkblue;
+   background:beige;
 }
 
 .divTexto table{
-    background:rgba(245, 245, 220, 0.74);
+    /*background:rgba(245, 245, 220, 0.74);*/
 }
 
 .mapaMundi{
     margin-top: 0%;
-    background: greenyellow;
+    /*background: greenyellow;*/
     
 }
 
 
 /*  ids */
+
 #divPrincipal{
     background: rgb(180, 180, 159);
     /*background:url("../images/mapamundi01.jpg");*/
@@ -64,12 +65,12 @@ h1{
 }
 
 #barraPrincipal li:hover{
-    background: grey;
+    /*background: grey;*/
 }
 
 #barraPrincipal a{
     text-decoration: none;
-    color: red;
+    color:beige;
 }
 
 #tablaCelebridad img{
