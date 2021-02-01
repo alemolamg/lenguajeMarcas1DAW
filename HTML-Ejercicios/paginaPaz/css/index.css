@@ -41,7 +41,7 @@ h1{
 /*  ids */
 
 #divPrincipal{
-    background: rgb(180, 180, 159);
+    /*background: rgb(180, 180, 159);*/
     /*background:url("../images/mapamundi01.jpg");*/
     vertical-align: top;
     margin-top: -2%;
@@ -65,7 +65,7 @@ h1{
 }
 
 #barraPrincipal li:hover{
-    /*background: grey;*/
+    background: rgb(87, 87, 87);
 }
 
 #barraPrincipal a{
