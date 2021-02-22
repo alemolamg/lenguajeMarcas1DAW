@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- sive para hacer la web responsiva -->
+    <title>Login Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--<link
+        href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"> -->
+
+    <style type="text/css">
+        body {
+            /*font-family: 'Mali', cursive; */
+        }
+    </style>
+
+</head>
+
+<body class=" bg-secondary">
+
+    <div class="container-md">
+        <div class="row my-5 d-flex justify-content-center container-fluid"> <!-- contiene la tarjeta, por lo que ajusta la posición de la misma-->
+            
+            <div class="card col-md-8 border-0 ">
+                <div class="row">
+                    <header class="card-header py-4 " style="width: 100%;">
+                        <h2 class="text-center">Login</h2>
+                    </header>
+                </div>
+
+                <div class="card-body ">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Recuerdame
+                        </label>
+                    </div>
+                    <div class="d-flex justify-content-between ">
+                        <a href="password_reset.html" class="">¿Has olvidado tu contraseña?</a>
+                        <button type="submit" class="btn btn-primary ">Entrar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <footer class="card-footer " style="width: 100%;"><a href="register.html" class="">¿Eres nuevo? Registrate aquí</a></footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="container-fluid bg-white fixed-bottom text-dark py-3 d-flex justify-content-between" style="margin-top: 1rem;">
+        <p class="">Copyright © By Alemol Website 2021 </p>
+        <a class="" href="#">Privacy Policy</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
