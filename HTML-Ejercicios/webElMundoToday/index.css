@@ -1,7 +1,12 @@
-#cabecera i{
+#cabecera a{
     color: black;
 }
 
 #cabecera a.hover{
     color: orange;
+}
+
+#cabeceraLADM {
+    background: orange;
+    background-color: orange;
 }
