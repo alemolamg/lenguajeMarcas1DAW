@@ -21,3 +21,19 @@
     color: grey;
     font-size: small;
 }
+
+#divPrincipal {
+    width: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;   
+}
+
+#tarjetaNoticia{
+
+}
+
+#tarjetaNoticia a{
+    text-decoration: none;
+}
