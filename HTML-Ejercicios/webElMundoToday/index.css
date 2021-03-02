@@ -1,5 +1,11 @@
+body{
+    overflow-x: hidden;
+}
+
 #cabecera{
     font-weight: bold;
+    padding: 0; /* redefine el cotainer-fluid de bootstrap  */
+    
 }
 
 #cabecera a{
