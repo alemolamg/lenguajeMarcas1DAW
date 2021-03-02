@@ -2,6 +2,11 @@ body{
     overflow-x: hidden;
 }
 
+#barraNav {
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+
 #cabecera{
     font-weight: bold;
     padding: 0; /* redefine el cotainer-fluid de bootstrap  */

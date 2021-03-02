@@ -41,59 +41,62 @@
         <div class="container-fluid justify-content-center d-flex my-2" id="cabeceraLADM">- LA ACTUALIDAD DEL MAÑANA -</div>
     </header>
 
-    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top" style="border-bottom: 1px solid rgb(0, 0, 0); width: 100%;">
-        
-        <div class="d-flex">
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background: green;" id="barraNav">
+        <div class="row container-fluid" style="background: brown;">
 
+            <div class="d-flex col-2">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="d-block d-md-none col">
+                <img src="imagenes/logo-elmundotoday2.png" class=" img-fluid" alt="El mundo Today">
+            </div>
+
+            <!-- Links -->
+            <div class="col-md-8 collapse navbar-collapse " style="background: greenyellow;" id="collapsibleNavbar">
+                <ul class="navbar-nav " style="margin-left: 120px;">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#">INTERNACIONAL</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">ESPAÑA</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">SOCIEDAD</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">CULTURA</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">CIENCIA Y TECNOLOGÍA</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">GENTE</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">DEPORTES</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        VIDEOS
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">EMT 24 horas</a>
+                            <a class="dropdown-item" href="#">EMT Cataluña</a>
+                            <a class="dropdown-item" href="#">EMT 60º</a>
+                            <a class="dropdown-item" href="#">EMT Documentales</a>
+                            <a class="dropdown-item" href="#">La naturaleza de la realidad</a>
+                            <a class="dropdown-item" href="#">Playjugones</a>
+                            <a class="dropdown-item" href="#">El cocina</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Links -->
-        <div class="col-md-8 collapse navbar-collapse " id="collapsibleNavbar">
-            <ul class="navbar-nav " style="margin-left: 120px;">
-                <li class="nav-item mx-2">
-                    <a class="nav-link " href="#">INTERNACIONAL</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">ESPAÑA</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">SOCIEDAD</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">CULTURA</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">CIENCIA Y TECNOLOGÍA</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">GENTE</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">DEPORTES</a>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    VIDEOS
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">EMT 24 horas</a>
-                        <a class="dropdown-item" href="#">EMT Cataluña</a>
-                        <a class="dropdown-item" href="#">EMT 60º</a>
-                        <a class="dropdown-item" href="#">EMT Documentales</a>
-                        <a class="dropdown-item" href="#">La naturaleza de la realidad</a>
-                        <a class="dropdown-item" href="#">Playjugones</a>
-                        <a class="dropdown-item" href="#">El cocina</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
     </nav>
 
     
