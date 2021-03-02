@@ -38,3 +38,12 @@
     text-decoration: none;
     color: black;
 }
+
+#noticia {
+    margin-top: 4%;
+}
+
+#noticia a{
+    text-decoration: none;
+    color: black;
+}
