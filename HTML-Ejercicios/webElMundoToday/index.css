@@ -11,8 +11,8 @@
 }
 
 #cabeceraLADM {
-    background: rgb(255, 123, 0);
-    background-color: rgb(255, 123, 0);
+    background: rgb(255, 102, 0);
+    background-color: rgb(255, 102, 0);
     color: white;
     font-weight: bold;
 }
@@ -20,4 +20,21 @@
 #certificado {
     color: grey;
     font-size: small;
+}
+
+#divPrincipal {
+    /*width: 80%;*/
+    /*margin-left: 20%;*/
+    /*display: flex;
+    justify-content: center;
+    align-content: center;   */
+}
+
+#tarjetaNoticia{
+    padding: 3%;
+}
+
+#tarjetaNoticia a{
+    text-decoration: none;
+    color: black;
 }
