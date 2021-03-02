@@ -1,3 +1,7 @@
+#cabecera{
+    font-weight: bold;
+}
+
 #cabecera a{
     color: black;
 }
@@ -7,6 +11,13 @@
 }
 
 #cabeceraLADM {
-    background: orange;
-    background-color: orange;
+    background: rgb(255, 123, 0);
+    background-color: rgb(255, 123, 0);
+    color: white;
+    font-weight: bold;
+}
+
+#certificado {
+    color: grey;
+    font-size: small;
 }
