@@ -9,32 +9,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" 
-      type="image/png" 
-      href="imagenes/EMTCuadrado.png" />
+    <link rel="icon" type="image/png" href="imagenes/EMTCuadrado.png" />
 </head>
 
 <body>
     <header class="bg-white py-2 container-fluid " id="cabecera">
         <div class="row d-flex justify-content-center">
             <div class="col-md d-md-flex d-none justify-content-center align-items-center ">
-                <a href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1" aria-hidden="true"> </i></a>
-                <a href="https://www.instagram.com/elmundotoday/" target="_blank"><i class="fa fa-instagram mx-1" aria-hidden="true"> </i></a>
-                <a href="https://twitter.com/elmundotoday" target="_blank"><i class="fa fa-twitter mx-1" aria-hidden="true"> </i></a>
-                <a href="https://www.youtube.com/user/ElMundoToday" target="_blank"><i class="fa fa-youtube-play mx-1" aria-hidden="true"> </i> </a>
-            </div> <!--iconos-->
+                <a href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1"
+                        aria-hidden="true"> </i></a>
+                <a href="https://www.instagram.com/elmundotoday/" target="_blank"><i class="fa fa-instagram mx-1"
+                        aria-hidden="true"> </i></a>
+                <a href="https://twitter.com/elmundotoday" target="_blank"><i class="fa fa-twitter mx-1"
+                        aria-hidden="true"> </i></a>
+                <a href="https://www.youtube.com/user/ElMundoToday" target="_blank"><i class="fa fa-youtube-play mx-1"
+                        aria-hidden="true"> </i> </a>
+            </div>
+            <!--iconos-->
 
-            <img src="imagenes/logo-elmundotoday2.png" class="col-8 col-md-5 img-fluid d-block" alt=""> <!--imagen EMT  -->
+            <!-- <a href="index.html"><img src="imagenes/logo-elmundotoday2.png" class="col-8 col-md-5 img-fluid d-block" alt=""></a> -->
+            <img src="imagenes/logo-elmundotoday2.png" class="col-8 col-md-5 img-fluid d-block" alt="">
+            <!--imagen EMT  -->
 
             <div class="col-md d-md-flex d-none justify-content-center align-items-center ">
                 <div><a href="#">Iniciar Sesion</a></div>
                 <button type="button" class="btn btn-primary mx-2">Hazte Suscriptor</button>
-                
-            </div> <!--iniciar sesion-->
+
+            </div>
+            <!--iniciar sesion-->
         </div>
         <div class="container-fluid justify-content-center d-flex my-1" id="cabeceraLADM">- LA ACTUALIDAD DEL MAÑANA -</div>
     </header>
-    
+
     <nav class="navbar navbar-expand-md bg-dark sticky-top">
         <a class="navbar-brand" href="./index.html">LMSG</a>
 
@@ -60,56 +66,111 @@
         </div>
     </nav>
 
-    <!--<header class="bg-primary text-white px-5 py-5 " >
-        <h1>La primera Web de Boostrap</h1>
-        <p>Resize this responsive page to see the effect!
-            Tipografía cambiada a propósito para practicar.
-        </p>
-    </header> -->
-
-        <div class="row" id="divPrincipal">
-            <div class="col-md-6">
-                <!-- Noticias -->
-                <div class="container-fluid" id="tarjetaNoticia"> <!-- Noticia Principal -->
-                    <a href="https://www.google.com"> <div class="card border-0">
-                            <img class="card-img-top img-fluid" src="https://emtstatic.com/2015/06/knight.jpg" alt="Card image">
+    
+    <div class="row container-fluid d-flex justify-content-center" id="divPrincipal">
+        <div class="col-md-4 " style="background: greenyellow;"> <!-- Noticias -->
+    
+            <div class="container"  id="tarjetaNoticia"> <!-- Noticia Principal -->
+                <a href="#">
+                    <div class="card border-0">
+                        <img class="card-img-top img-fluid" src="https://emtstatic.com/2015/06/knight.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Michael Knight tendrá que cambiarse el coche fantástico porque no es
+                                compatible con el Apple Watch</h4>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+            </div>
+    
+            <div class="row" style="background-color: green;">
+                <div class="col-md-6" id="tarjetaNoticia">
+    
+                    <a href="#">
+                        <div class="card border-0">
+                            <img class="card-img-top img-fluid" src="imagenes/accidente.jfif" alt="Card image">
                             <div class="card-body">
-                                <h4 class="card-title">Michael Knight tendrá que cambiarse el coche fantástico porque no es compatible con el Apple Watch</h4>
+                                <h4 class="card-title">Los accidentes espectaculares añadirán puntos al carné</h4>
                             </div>
                         </div>
                     </a>
-                    <hr>
+    
                 </div>
-                <div class="col-md-6">
-                    texto ejemplo 1
+    
+                <div class="col-md-6" id="tarjetaNoticia">
+                    <a href="#">
+                        <div class="card border-0">
+                            <img class="card-img-top img-fluid" src="https://emtstatic.com/2021/02/sleep-768x470.jpg"
+                                alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Solo uno de cada diez mimos acaba en coito, el peor resultado de
+                                    San Valentín desde 1972</h4>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-6">
-                    texto ejemplo 2
-                </div>
-            </div>
-            <div class="col-md-3">
-                <!--Publicidad-->
-                <img src="imagenes/bannerlibros.jpg" class="img-fluid" alt="">
+    
             </div>
     
-            <div class="col-md-3">
-                <!-- Publicidad -->
+            <div class="row" style="background-color: green;">
+    
+                <div class="col-md-6" id="tarjetaNoticia">
+                    <a href="https://www.youtube.com/watch?v=qtE23nkrBHo" target="_blank">
+                        <div class="card border-0">
+                            <img class="card-img-top img-fluid" src="https://emtstatic.com/2015/06/knight.jpg"
+                                alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Alemol presenta su nuevo escritorio</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-md-6" id="tarjetaNoticia">
+                    <a href="#" target="">
+                        <div class="card border-0">
+                            <img class="card-img-top img-fluid" src="https://emtstatic.com/2012/04/atracador.jpg"
+                                alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Ladrón atraca un banco y sale con una hipoteca a 30 años</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
     
             </div>
     
         </div>
+    
+        <div class="col-md-3 py-2" style="background-color: gold;">
+            <!--Publicidad-->
+            <img src="imagenes/bannerlibros.jpg" class="img-fluid" alt="">
+            <img src="" class="img-fluid" alt="">
+        </div>
+    
+    </div>
+
+    <div class="container-fluid" style="background-color:#00BBB0;"> <!--Suscripción-->
+        <a href="#"><img src="imagenes/suscripcionFoto.png" class="img-fluid" alt=""></a>
+    </div>
 
 
-    <footer class=" container-fluid bg-dark text-white py-4" >
+    <footer class=" container-fluid bg-dark text-white py-4">
         <div class="row justify-content-around">
             <div class="col-md-4 p-2">
                 <img src="imagenes/logo-emt-white.png" alt="">
                 <div class="col-md justify-content-center align-items-center ">
-                    <button type="button" class="btn btn-sm btn-outline-primary"><a href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1" aria-hidden="true"></i></a></button>
-                    <a href="https://www.instagram.com/elmundotoday/" target="_blank"><i class="fa fa-instagram mx-1" aria-hidden="true"> </i></a>
-                    <a href="https://twitter.com/elmundotoday" target="_blank"><i class="fa fa-twitter mx-1" aria-hidden="true"> </i></a>
-                    <a href="https://www.youtube.com/user/ElMundoToday" target="_blank"><i class="fa fa-youtube-play mx-1" aria-hidden="true"> </i> </a>
-                </div> <!--iconos-->
+                    <button type="button" class="btn btn-sm btn-outline-primary"><a
+                            href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1"
+                                aria-hidden="true"></i></a></button>
+                    <a href="https://www.instagram.com/elmundotoday/" target="_blank"><i class="fa fa-instagram mx-1"
+                            aria-hidden="true"> </i></a>
+                    <a href="https://twitter.com/elmundotoday" target="_blank"><i class="fa fa-twitter mx-1"
+                            aria-hidden="true"> </i></a>
+                    <a href="https://www.youtube.com/user/ElMundoToday" target="_blank"><i
+                            class="fa fa-youtube-play mx-1" aria-hidden="true"> </i> </a>
+                </div>
+                <!--iconos-->
             </div>
 
             <div class="col-md-3 p-2">
@@ -120,14 +181,14 @@
                     <button type="submit" class="btn btn-primary my-3">SUSCRIBETE</button>
                 </div>
             </div>
-            
+
             <div class="col-md-4 mx-2 p-1" id="certificado">
                 <p>Con el apoyo tecnológico de:</p>
                 <a href="https://www.icm.es" target="_blank"><img src="imagenes/certificado.png" alt=""></a>
             </div>
 
         </div>
-        
+
     </footer>
 
 
