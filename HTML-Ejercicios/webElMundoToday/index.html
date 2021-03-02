@@ -15,22 +15,24 @@
 </head>
 
 <body>
-    <header class="container-fluid bg-white py-2 " id="cabecera">
-        <div class="row d-flex ">
-            <div class="col-md-3 d-md-flex d-none justify-content-center align-items-center ">
-                <a href="https://www.facebook.com/elmundotoday/"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
-                <a href="https://www.instagram.com/elmundotoday/"><i class="fa fa-instagram" aria-hidden="true"> </i></a>
-                <a href="https://twitter.com/elmundotoday"><i class="fa fa-twitter" aria-hidden="true"> </i></a>
-                <a href="https://www.youtube.com/user/ElMundoToday"><i class="fa fa-youtube-play" aria-hidden="true"> </i> </a>
+    <header class="bg-white py-2 container-fluid " id="cabecera">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md d-md-flex d-none justify-content-center align-items-center ">
+                <a href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1" aria-hidden="true"> </i></a>
+                <a href="https://www.instagram.com/elmundotoday/" target="_blank"><i class="fa fa-instagram mx-1" aria-hidden="true"> </i></a>
+                <a href="https://twitter.com/elmundotoday" target="_blank"><i class="fa fa-twitter mx-1" aria-hidden="true"> </i></a>
+                <a href="https://www.youtube.com/user/ElMundoToday" target="_blank"><i class="fa fa-youtube-play mx-1" aria-hidden="true"> </i> </a>
             </div> <!--iconos-->
 
-            <img src="imagenes/logo-elmundotoday2.png" class="col-8 col-md-6 img-fluid d-block" alt=""> <!--imagen-->
+            <img src="imagenes/logo-elmundotoday2.png" class="col-8 col-md-5 img-fluid d-block" alt=""> <!--imagen EMT  -->
 
-            <div class="col-md-3">
-                <div>Iniciar Sesion</div>
+            <div class="col-md d-md-flex d-none justify-content-center align-items-center ">
+                <div><a href="#">Iniciar Sesion</a></div>
+                <button type="button" class="btn btn-primary mx-2">Hazte Suscriptor</button>
                 
             </div> <!--iniciar sesion-->
         </div>
+        <div class="container-fluid justify-content-center d-flex my-1" id="cabeceraLADM">- LA ACTUALIDAD DEL MAÑANA -</div>
     </header>
     
     <nav class="navbar navbar-expand-md bg-danger sticky-top">
@@ -66,8 +68,41 @@
     </header>
 
 
-    <footer class=" container-fluid bg-dark fixed-bottom text-white py-4" style="margin-top: 1rem;">
-        <p class="text-center">Copyright ©  By Alemol Website 2020</p>
+    <footer class=" container-fluid bg-dark text-white py-4" >
+        <div class="row justify-content-around">
+            <div class="col-md-4 p-2">
+                <img src="imagenes/logo-emt-white.png" alt="">
+                <div class="col-md justify-content-center align-items-center ">
+                    <button type="button" class="btn btn-sm btn-outline-primary"><a href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1" aria-hidden="true"></i></a></button>
+                    <a href="https://www.instagram.com/elmundotoday/" target="_blank"><i class="fa fa-instagram mx-1" aria-hidden="true"> </i></a>
+                    <a href="https://twitter.com/elmundotoday" target="_blank"><i class="fa fa-twitter mx-1" aria-hidden="true"> </i></a>
+                    <a href="https://www.youtube.com/user/ElMundoToday" target="_blank"><i class="fa fa-youtube-play mx-1" aria-hidden="true"> </i> </a>
+                </div> <!--iconos-->
+            </div>
+
+            <div class="col-md-3 p-2">
+                <p class="text-center">EL MUNDO TODAY EN TU BUZÓN</p>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <button type="submit" class="btn btn-primary my-3">SUSCRIBETE</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mx-2 p-1" id="certificado">
+                <p>Con el apoyo tecnológico de:</p>
+                <a href="https://www.icm.es" target="_blank"><img src="imagenes/certificado.png" alt=""></a>
+            </div>
+
+        </div>
+        <div class="row d-flex">
+            <div class="justify-content-start">
+                © El Mundo Today
+            </div>
+            <div class="justify-content-end">
+                Copyright ©  By Alemol Website 2020
+            </div>
+        </div>
     </footer>
 
 

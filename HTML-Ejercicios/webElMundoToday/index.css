@@ -1,7 +1,23 @@
-#cabecera i{
+#cabecera{
+    font-weight: bold;
+}
+
+#cabecera a{
     color: black;
 }
 
 #cabecera a.hover{
     color: orange;
+}
+
+#cabeceraLADM {
+    background: rgb(255, 123, 0);
+    background-color: rgb(255, 123, 0);
+    color: white;
+    font-weight: bold;
+}
+
+#certificado {
+    color: grey;
+    font-size: small;
 }
