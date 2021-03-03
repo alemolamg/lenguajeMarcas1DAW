@@ -4,13 +4,19 @@ body{
 
 #barraNav {
     border-bottom: 1px solid rgb(0, 0, 0);
-
+    background: white;
+    background-color: white;
 }
 
 #cabecera{
     font-weight: bold;
     padding: 0; /* redefine el cotainer-fluid de bootstrap  */
     
+}
+
+#cabeceraSus {
+    background: rgb(255, 102, 0);
+    background-color: rgb(255, 102, 0);
 }
 
 #cabecera a{
@@ -57,4 +63,8 @@ body{
 #noticia a{
     text-decoration: none;
     color: black;
+}
+
+#footerStyle a{
+    color: white;
 }

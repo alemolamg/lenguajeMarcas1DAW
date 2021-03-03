@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- sive para hacer la web responsiva -->
     <title>El otro Mundo Today</title>
-    <link href="index.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./index.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,7 +33,7 @@
 
             <div class="col-md d-md-flex d-none justify-content-center align-items-center ">
                 <div><a href="#">Iniciar Sesion</a></div>
-                <button type="button" class="btn btn-primary mx-2">Hazte Suscriptor</button>
+                <a href="./suscripcion.html" class="btn mx-2" style="background: #02cec0;" role="button"> Hazte Suscriptor</a>
 
             </div>
             <!--iniciar sesion-->
@@ -41,12 +41,11 @@
         <div class="container-fluid justify-content-center d-flex my-2" id="cabeceraLADM">- LA ACTUALIDAD DEL MAÑANA -</div>
     </header>
 
-    <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background: green;" id="barraNav">
-        <div class="row container-fluid" style="background: brown;">
-
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" id="barraNav">
+        
             <div class="d-flex col-2">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#collapsibleNavbar">
+                    data-target="#colapsaNavBar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -56,8 +55,8 @@
             </div>
 
             <!-- Links -->
-            <div class="col-md-8 collapse navbar-collapse " style="background: greenyellow;" id="collapsibleNavbar">
-                <ul class="navbar-nav " style="margin-left: 120px;">
+            <div class="col-md-8 collapse navbar-collapse " id="colapsaNavBar">
+                <ul class="navbar-nav m-auto" style="margin-left: 120px;">
                     <li class="nav-item ">
                         <a class="nav-link " href="#">INTERNACIONAL</a>
                     </li>
@@ -96,7 +95,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        
     </nav>
 
     
@@ -187,19 +186,19 @@
     </div>
 
     <div class="row container-fluid d-flex justify-content-center" id="divPrincipal">
-        <div class="row col-md-6" > <!-- Noticia Apaisada -->
+        <div class="row col-md-6 p-1" > <!-- Noticia Apaisada -->
             <div class="col-md-3" ><img src="https://emtstatic.com/2021/02/endesa-150x150.png" class="img-fluid entry-thumb"  alt=""> </div>
             <div class="col-md-8" id="noticia"><h4>Endesa gana 1.394 millones por aquel día que dejaste la luz de la cocina encendida toda la noche </h4> </div>
         </div>
-        <div class="col-md-3" style="background-color: gold;">
+        <div class="col-md-3 p-1" style="background-color: gold;">
             
         </div>
         
-        <div class="row col-md-6"> <!-- Noticia Apaisada -->
+        <div class="row col-md-6 p-1"> <!-- Noticia Apaisada -->
             <div class="col-md-3" ><img src="https://emtstatic.com/2021/02/iStock-1194721970-150x150.jpg" class="img-fluid entry-thumb"  alt=""> </div>
             <div class="col-md-8" id="noticia" ><h4>«Me siento como si me hubiera pasado un camión por encima», dice un optimista después de haber sido atropellado por dos camiones</h4> </div>
         </div>
-        <div class="col-md-3" style="background-color: gold;">
+        <div class="col-md-3 p-1" style="background-color: gold;">
             otra noticia
         </div>
         
@@ -210,18 +209,16 @@
         <div class="row justify-content-around">
             <div class="col-md-4 p-2">
                 <img src="imagenes/logo-emt-white.png" alt="">
-                <div class="col-md justify-content-center align-items-center ">
-                    <button type="button" class="btn btn-sm btn-outline-primary"><a
-                            href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1"
-                                aria-hidden="true"></i></a></button>
+                <div class="col-md justify-content-center align-items-center " id="footerStyle">
+                    <a href="https://www.facebook.com/elmundotoday/" target="_blank"><i class="fa fa-facebook mx-1"
+                                aria-hidden="true"></i></a>
                     <a href="https://www.instagram.com/elmundotoday/" target="_blank"><i class="fa fa-instagram mx-1"
                             aria-hidden="true"> </i></a>
                     <a href="https://twitter.com/elmundotoday" target="_blank"><i class="fa fa-twitter mx-1"
                             aria-hidden="true"> </i></a>
                     <a href="https://www.youtube.com/user/ElMundoToday" target="_blank"><i
                             class="fa fa-youtube-play mx-1" aria-hidden="true"> </i> </a>
-                </div>
-                <!--iconos-->
+                </div> <!--iconos-->
             </div>
 
             <div class="col-md-3 p-2">
